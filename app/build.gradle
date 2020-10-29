@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.groupvideochatdemo"
-        minSdkVersion 19
+        minSdkVersion 25
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 }
 
 dependencies {
@@ -30,4 +34,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    // run time permission
+    implementation 'com.karumi:dexter:6.0.2'
+
+    // All dimens
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //openBox
+    implementation 'com.opentok.android:opentok-android-sdk:2.17.2'
 }
